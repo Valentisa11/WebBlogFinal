@@ -11,15 +11,13 @@ namespace WebBlogFinal.BLL.Services
     public class CommentService : ICommentService
     {
         public IMapper _mapper;
-        private readonly ICommentRepository _commentRepo;
-        //private readonly UserManager<User> _userManager;
+		private readonly ICommentRepository _commentRepo;//private readonly UserManager<User> _userManager;
 
-        public CommentService(IMapper mapper, ICommentRepository commentRepo, UserManager<User> userManager)
-        {
+		public CommentService(IMapper mapper, ICommentRepository commentRepo)
+		{
             _mapper = mapper;
-            _commentRepo = commentRepo;
-            //_userManager = userManager;
-        }
+			_commentRepo = commentRepo;//_userManager = userManager;
+		}
 
         public async Task<Guid> CreateComment(CommentCreateViewModel model, Guid userId)
         {
@@ -27,10 +25,8 @@ namespace WebBlogFinal.BLL.Services
             {
                 Content = model.Content,
                 AuthorName = model.Author,
-                PostId = model.PostId,
-                //UserId = userId,
-                //AuthorName = _userManager.FindByIdAsync(userId.ToString()).Result.UserName,
-            };
+				PostId = model.PostId,//UserId = userId,//AuthorName = _userManager.FindByIdAsync(userId.ToString()).Result.UserName,
+			};
 
             await _commentRepo.AddComment(comment);
 
@@ -69,7 +65,7 @@ namespace WebBlogFinal.BLL.Services
         {
             return _commentRepo.GetAllComments().ToList();
         }
-        public async Task<Comment> GetComment(Guid id)
+        public async Task<Comment> GetComment(Guid id)//
         {
             return _commentRepo.GetComment(id);
         }

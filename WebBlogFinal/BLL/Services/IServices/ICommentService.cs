@@ -11,7 +11,7 @@ namespace WebBlogFinal.BLL.Services.IServices
         Task RemoveComment(Guid id);
 
         Task<List<Comment>> GetComments();
-        Task<Comment> GetComment(Guid id);
+        Task<Comment> GetComment(Guid id);//
 
         Task<CommentEditViewModel> EditComment(Guid id);
 

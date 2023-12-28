@@ -78,7 +78,7 @@ namespace WebBlogFinal.BLL.Services
                 Email = user.Email,
                 NewPassword = string.Empty,
                 Id = id,
-                Roles = allRolesName.Select(r => new RoleViewModel() { Id = new string(r.Id), Name = r.Name }).ToList(),
+                Roles = allRolesName.Select(r => new CommentViewModel() { Id = new string(r.Id), Name = r.Name }).ToList(),
             };
 
             return model;

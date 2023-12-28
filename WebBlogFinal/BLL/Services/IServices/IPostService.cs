@@ -17,6 +17,6 @@ namespace WebBlogFinal.BLL.Services.IServices
         Task<List<Post>> GetPosts();
         Task<Post> ShowPost(Guid id);
 
-        Task<List<Post>> GetPostsByAuthor(string authorId);
+        Task<List<Post>> GetPostsByAuthor(string authorId);//
     }
 }

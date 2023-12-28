@@ -172,24 +172,24 @@ namespace WebBlogFinal.BLL.Services
 
             return post;
         }
-        public async Task<List<Post>> GetPostsByAuthor(string authorId)
+        public async Task<List<Post>> GetPostsByAuthor(string authorId)//
         {
             return await _repo.GetPostsByAuthor(authorId);
         }
 
-        Task<List<Post>> IPostService.GetPosts()
-        {
-            throw new NotImplementedException();
-        }
+        //*Task<List<Post>> IPostService.GetPosts()
+       // {
+          //throw new NotImplementedException();
+       // }
 
-        Task<Post> IPostService.ShowPost(Guid id)
-        {
-            throw new NotImplementedException();
-        }
+      //  Task<Post> IPostService.ShowPost(Guid id)
+      //  {
+        //    throw new NotImplementedException();
+       // }
 
-        Task<List<Post>> IPostService.GetPostsByAuthor(string authorId)
-        {
-            throw new NotImplementedException();
-        }
+      //Task<List<Post>> IPostService.GetPostsByAuthor(string authorId)
+       // {
+       //     throw new NotImplementedException();
+      //  }
     }
 }

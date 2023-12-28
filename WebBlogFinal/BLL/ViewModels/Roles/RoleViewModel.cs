@@ -2,8 +2,8 @@
 
 namespace WebBlogFinal.BLL.ViewModels.Roles
 {
-    public class RoleViewModel
-    {
+    public class CommentViewModel
+	{
         public string? Id { get; set; }
 
         [Display(Name = "Name")]
