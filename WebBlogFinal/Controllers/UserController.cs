@@ -6,8 +6,9 @@ using WebBlogFinal.BLL.ViewModels.Users;
 
 namespace WebBlogFinal.Controllers
 {
-    public class UserController : Controller
-    {
+	[ApiExplorerSettings(IgnoreApi = true)]
+	public class UserController : Controller
+	{
 		private readonly IUserService _userService;
 		private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
 

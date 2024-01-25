@@ -7,12 +7,13 @@ using WebBlogFinal.BLL.Services;
 using WebBlogFinal.BLL.Services.IServices;
 using WebBlogFinal.BLL.ViewModels.Comments;
 using WebBlogFinal.DAL.Models;
-using NLog;
+
 
 namespace WebBlogFinal.Controllers
 {
-    public class CommentController : Controller
-    {
+	[ApiExplorerSettings(IgnoreApi = true)]
+	public class CommentController : Controller
+	{
 		private readonly ICommentService _commentService;
 		private readonly UserManager<User> _userManager;
 		private static readonly Logger Logger = LogManager.GetCurrentClassLogger();

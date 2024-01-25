@@ -6,8 +6,9 @@ using WebBlogFinal.BLL.ViewModels.Roles;
 
 namespace WebBlogFinal.Controllers
 {
-    public class RoleController : Controller
-    {
+	[ApiExplorerSettings(IgnoreApi = true)]
+	public class RoleController : Controller
+	{
 		private readonly IRoleService _roleService;
 		private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
